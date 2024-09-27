@@ -1,0 +1,31 @@
+﻿
+Sam Robichaud 
+NSCC Truro 2024
+This work is licensed under CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+═════ TODO: High Priority ══════
+
+
+
+
+
+═════ TODO: Mid Priority ══════
+
+• QOL: 
+• QOL: 
+
+══════ TODO: Low Priority (Nice to Have) ══════
+
+• Improvement: 
+
+
+
+════ COMPLETED ═════
+
+• Sept/08/2024: Implemented Credits Screen navigation
+• Sept/08/2024: Implemented Options Screen navigation
+• Sept/08/2024: Implemented GameOver Screen navigation
+• Sept/07/2024: Corrected error with gravity that caused player to immediately move down when walking off edge of mesh.
+• Sept/07/2024: Refactored state machine to be more generic, fixed many loose ends irrelevant to Base Project.
+• Sept/06/2024: Ported Base State Machine functionality, did basic configuration.
+• Sept/06/2024: Added simple third Person control functionality.
