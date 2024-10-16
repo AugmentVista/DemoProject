@@ -28,7 +28,7 @@ public class PlayerLocomotionHandler : MonoBehaviour
 
     private Vector3 moveDirection;
     private Vector3 velocity;
-    private bool isJumping = false; // Track if player is currently jumping
+    //private bool isJumping = false; // Track if player is currently jumping
 
 
     private void Awake()
@@ -72,7 +72,7 @@ public class PlayerLocomotionHandler : MonoBehaviour
         // Apply gravity
         if (characterController.isGrounded)
         {
-            isJumping = false;
+            //isJumping = false;
             if (velocity.y < 0)
             {
                 velocity.y = -2f; // Small downward force to stay grounded
@@ -113,7 +113,7 @@ public class PlayerLocomotionHandler : MonoBehaviour
         // Only jump if grounded
         if (characterController.isGrounded)
         {
-            isJumping = true;
+            //isJumping = true;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); // Apply jump force
         }
     }
