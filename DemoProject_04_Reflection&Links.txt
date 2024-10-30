@@ -1,9 +1,0 @@
-Reflection:
-
-The prior challenge I felt very confident with and was able to finish the challenge before dinner that Wednesday. Raycasting was a bit trickier, I had no no problem at all with getting the first step to work. The first step being the raycast changing the color of the cube, it was the second step that proved to be the challenge. Have the cube reset back to what it was previously when the Raycast leaves it. I tried to approach this all in one motion which was the wrong approach. Trying to maintain an object reference to an object you aren't interaction with and don't have hard assigned declarations at the class level was too hard for me. I ended up with the solution of creating an array of colors that the cube swaps between while the Raycast is pointing at it. When the Raycast looks away from the cube it skips to the end of the array and tells the cube to be red again.
-
-https://github.com/AugmentVista/DemoProject GitHub Repo
-
-https://augmented-silver.itch.io/demoproject  Playable Build
-
-https://youtu.be/FN8U9nMKa1w Video demonstration
