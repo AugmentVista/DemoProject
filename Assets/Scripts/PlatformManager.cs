@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlatformManager : MonoBehaviour
 {
     [SerializeField] private Transform[] waypoints = new Transform[3];
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private bool showGizmo = true;
     [SerializeField] private float arrowSize = 0.5f;
     [SerializeField] private float arrowAmount = 1;
@@ -128,10 +128,5 @@ public class PlatformManager : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, 0.25f);
-
-
-
-
-
     }
 }

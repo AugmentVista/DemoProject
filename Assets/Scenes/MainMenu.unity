@@ -5626,6 +5626,7 @@ GameObject:
   - component: {fileID: 4027215615656261959}
   - component: {fileID: 497978516442612687}
   - component: {fileID: 7443261781641931865}
+  - component: {fileID: 7443261781641931866}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -7621,6 +7622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLocomotionHandler: {fileID: 4027215615656261959}
   cameraManager: {fileID: 1905368462019788542}
+  interactionManager: {fileID: 7443261781641931866}
   verticalInput: 0
   horizontalInput: 0
   jumpInput: 0
@@ -8018,6 +8020,28 @@ MonoBehaviour:
   cubeFilter:
     serializedVersion: 2
     m_Bits: 128
+  sphereFilter:
+    serializedVersion: 2
+    m_Bits: 0
+  colorList: []
+  colorAmount: 10
+--- !u!114 &7443261781641931866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547003004845256985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e9e5484a7e09b48b0b84b0314c5a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraManager: {fileID: 1905368462019788542}
+  playerCam: {fileID: 4502274783414864541}
+  uIManager: {fileID: 8355736390106424995}
+  target: {fileID: 0}
+  interactionPossible: 0
 --- !u!1 &7476414550277911458
 GameObject:
   m_ObjectHideFlags: 0
@@ -9087,6 +9111,7 @@ MonoBehaviour:
   creditsMenuUI: {fileID: 7932232891182133882}
   LoadingScreen: {fileID: 3865917470465171184}
   LevelCount: {fileID: 395305542557099569}
+  gameplayMessage: {fileID: 8214353934875711789}
   loadingScreenCanvasGroup: {fileID: 9215699074283453989}
   loadingBar: {fileID: 6076491000392930057}
   loadingText: {fileID: 8507737394779328442}
