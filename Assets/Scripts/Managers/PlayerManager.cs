@@ -65,18 +65,10 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    
-
     public void ResetPlayerToSpawn()
     {
         // TODO: lock out Character controller while move is performed...
         
         player.transform.position = new Vector3(0, 1, 0);
-
-
-   
     }
-
-
-
 }

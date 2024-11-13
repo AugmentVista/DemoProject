@@ -30,11 +30,21 @@ public class PlayerLocomotionHandler : MonoBehaviour
     private Vector3 velocity;
     //private bool isJumping = false; // Track if player is currently jumping
 
+    [SerializeField] private CharacterStats playerStats;
 
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            playerStats.ShowName();
+        }
+    }
+
 
     public void HandleAllPlayerMovement()
     {

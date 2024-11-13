@@ -54,7 +54,7 @@ public class InputManager : MonoBehaviour
         HandleJumpInput();
         HandleCameraInput();
         HandlePauseKeyInput();
-        HandleInteractinoInput();
+        HandleInteractionInput();
     }
 
     private void OnEnable()
@@ -62,8 +62,6 @@ public class InputManager : MonoBehaviour
         playerControls = new @PlayerInputAction();
 
         interactionManager = FindObjectOfType<InteractionManager>();
-
-        //interactionManager = new InteractionManager();
 
         playerFire = playerControls.Player.Fire;
         playerControls.Enable();
@@ -87,7 +85,7 @@ public class InputManager : MonoBehaviour
     }
 
 
-    private void HandleInteractinoInput()
+    private void HandleInteractionInput()
     {
         if (playerFire.IsPressed() && interactionManager.interactionPossible)
         {

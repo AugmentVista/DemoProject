@@ -67,7 +67,9 @@ public class InteractionManager : MonoBehaviour
 
                 break;
             case Interactable.InteractionType.Pickup:
-
+                Interactable coin = target.GetComponent<Interactable>();
+                Debug.Log($"Coin is worth: {coin.PickUpItem()}");
+                target.SetActive(false);
                 break;
         }
     }
@@ -87,22 +89,11 @@ public class InteractionManager : MonoBehaviour
 
                     break;
                 case Interactable.InteractionType.Pickup:
-
+                    message = "Press LMB to Collect";
                     break;
             }
         }
         uIManager.UpdateGameplayMessage(message);
     }
-
-    
-
-
-
-
-
-
-
-
-
 
 }
