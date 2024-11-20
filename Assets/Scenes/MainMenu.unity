@@ -240,6 +240,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1583253800}
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!1 &330067213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330067214}
+  - component: {fileID: 330067215}
+  m_Layer: 0
+  m_Name: Reader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &330067214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330067213}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3996749830205255785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &330067215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330067213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd979eb9f843ddc4d9c0f08c101ac30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: df0782c882cd60947ae003b930f98520, type: 3}
+  currentLanguage: fr
+  titleText: {fileID: 6752352808941485598}
+  playText: {fileID: 843238240619753979}
+  quitText: {fileID: 5852580514693888025}
+  optionsText: {fileID: 4634430469099357258}
+  creditsText: {fileID: 2583694739180662159}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,6 +3103,7 @@ GameObject:
   - component: {fileID: 2753179713522035965}
   - component: {fileID: 3696171123369866091}
   - component: {fileID: 4634430469099357258}
+  - component: {fileID: 4634430469099357259}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -5123,6 +5175,7 @@ Transform:
   - {fileID: 7443261781641931864}
   - {fileID: 7412549944092835146}
   - {fileID: 3948512241072759060}
+  - {fileID: 330067214}
   - {fileID: 501462963261386054}
   - {fileID: 2572171151004450276}
   m_Father: {fileID: 0}
@@ -5677,6 +5730,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: OPTIONS
+--- !u!114 &4634430469099357259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748284643769402806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8193ec38518184faaab41b74c0a2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tableReference: UI
+  localizationKey: OPTIONS
+  text: {fileID: 4634430469099357258}
 --- !u!1 &4643653676598963274
 GameObject:
   m_ObjectHideFlags: 0
@@ -6004,6 +6072,7 @@ GameObject:
   - component: {fileID: 371422890535905973}
   - component: {fileID: 6276823745624219018}
   - component: {fileID: 843238240619753979}
+  - component: {fileID: 6276823745624219019}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6460,9 +6529,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
-        m_MethodName: UnPause
+      - m_Target: {fileID: 7631552970930455021}
+        m_TargetAssemblyTypeName: LanChange, Assembly-CSharp
+        m_MethodName: ChangeLanguage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7100,7 +7169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &6177346667276978823
 Animator:
   serializedVersion: 5
@@ -7178,6 +7247,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5050916494048883606}
   m_CullTransparentMesh: 0
+--- !u!114 &6276823745624219019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050916494048883606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8193ec38518184faaab41b74c0a2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tableReference: UI
+  localizationKey: PLAY
+  text: {fileID: 843238240619753979}
 --- !u!4 &6311081804821276691
 Transform:
   m_ObjectHideFlags: 0
@@ -8310,6 +8394,7 @@ GameObject:
   - component: {fileID: 4555402422491248760}
   - component: {fileID: 5346749831750613763}
   - component: {fileID: 5635515497019366966}
+  - component: {fileID: 7631552970930455021}
   m_Layer: 5
   m_Name: 'BTN: Option A'
   m_TagString: Untagged
@@ -8317,6 +8402,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7631552970930455021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631552970930455020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d1b72afc05b644f92fb4d0a73775e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reader: {fileID: 330067215}
 --- !u!224 &7660234190758582657
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8672,7 +8770,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -8683,7 +8781,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: Change Language
 --- !u!1 &7932232891182133882
 GameObject:
   m_ObjectHideFlags: 0
@@ -9386,7 +9484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &8772088538451377448
 GameObject:
   m_ObjectHideFlags: 0
